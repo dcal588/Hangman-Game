@@ -10,7 +10,7 @@
       var blankSpaces = blankSpacesStart(randomWord);
 
       function myFunction(event) {
-        var x = event.keyCode;
+        var x = event.onkeypress;
         var y = String.fromCharCode(x);
         document.getElementById("demo").innerHTML = "Number: " + x + " = Character: " + y;
       }

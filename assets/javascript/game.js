@@ -9,10 +9,10 @@
       var guessesAvailable = randomWord.length + 5;
       var blankSpaces = blankSpacesStart(randomWord);
 
-      function myFunction(event) {
-        var x = event.onkeypress;
-        var y = String.fromCharCode(x);
-        document.getElementById("demo").innerHTML = "Number: " + x + " = Character: " + y;
+      document.getElementById("demo").addEventListener("keypress", myFunction);
+
+      function myFunction() {
+        document.getElementById("message").innerHTML = "Yey";
       }
 
       function blankSpacesStart (wrd){

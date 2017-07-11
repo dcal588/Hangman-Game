@@ -33,7 +33,7 @@
 
       function checker (){
         var i = randomLetters.indexOf(key);
-        if (i === -1) {
+        if (i !== -1) {
           randomLetters.splice(i,1);
         }
         var progressDiv = document.getElementById("progress");

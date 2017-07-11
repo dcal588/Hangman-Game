@@ -12,12 +12,11 @@
           console.log(key);
         });
       });
-      $(function(){
-        var blankSpacesStart = '';
-        for (var i = 0; i < randomWord.length; i++) {
-          var  blankSpacesStart= blankSpacesStart+'_';
+      function blankSpacesStart (wrd){
+        var spaces = '';
+        for (var i = 0; i < wrd.length; i++){
+          spaces = spaces + ' _';
         }
-      });
-        console.log(blankSpacesStart);
+      }
 
     });

@@ -13,7 +13,7 @@
         var char = event.which || event.keyCode;
         document.getElementById("message").innerHTML = "The Unicode CHARACTER code is: " + char;
      }
-      }
+      
       function blankSpacesStart (wrd){
         var spaces = '';
         for (var i = 0; i < wrd.length; i++){

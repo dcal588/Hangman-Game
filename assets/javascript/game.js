@@ -10,7 +10,7 @@
       var blankSpaces = blankSpacesStart(randomWord);
 
      function uniCharCode(event) {
-        var char = event.which || event.keyCode;
+        var char = event.which;
         document.getElementById("message").innerHTML = "The Unicode CHARACTER code is: " + char;
      }
       function blankSpacesStart (wrd){

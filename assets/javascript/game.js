@@ -5,18 +5,38 @@
       var randomWord = words[randomNumber];
       var randomHint = hints[randomNumber];
       var randomLetters = randomWord.split('');
+      var guessesMade = 0
+      var guessesAvailable = randomWord.length + 5;
       var blankSpaces = blankSpacesStart(randomWord);
-      $(function() {
-        $(window).keypress(function(event) {
-          var key = String.fromCharCode(event.which)
-          console.log(key);
-        });
-      });
+
+      function keyListener(event) {
+      var guesses = event.key;
+      var guesses = document.getElementById("message");
+      guesses.innerhtml = guesses;
+
+      }
       function blankSpacesStart (wrd){
         var spaces = '';
         for (var i = 0; i < wrd.length; i++){
           spaces = spaces + ' _';
         }
+        var progressDiv = document.getElementById("progress");
+          progressDiv.innerHTML = spaces;
       }
+      var hintDiv = document.getElementById("hint");
+        hintDiv.innerHTML = randomHint;
+      
+      if (guessesMade === guessesAvailable) {
+        messageDiv.innerHTML = "Game Over";
+      }
+      var messageDiv = document.getElementById("message");
 
+      function checker (){
+        var i = randomLetters.indexOf(key);
+        if (i === -1) {
+          randomLetters.splice(i,1);
+        }
+        var progressDiv = document.getElementById("progress");
+          progressDiv.innerHTML = spaces;
+      }
     });

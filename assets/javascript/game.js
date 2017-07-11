@@ -9,9 +9,9 @@
       var guessesAvailable = randomWord.length + 5;
       var blankSpaces = blankSpacesStart(randomWord);
 
-      document.getElementById("demo").addEventListener("keypress", myFunction);
+      document.getElementById("guessArea").addEventListener("keypress", listener);
 
-      function myFunction() {
+      function listener() {
         document.getElementById("message").innerHTML = "Yey";
       }
 

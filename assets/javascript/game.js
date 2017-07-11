@@ -9,7 +9,7 @@
       var guessesAvailable = randomWord.length + 5;
       var blankSpaces = blankSpacesStart(randomWord);
 
-      function myFunction(event) {
+      function listener(event) {
         var x = event.keyCode;
         var y = String.fromCharCode(x);
         document.getElementById("demo").innerHTML = "Number: " + x + " = Character: " + y;

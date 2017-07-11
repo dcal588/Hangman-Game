@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <input type="text" id="guessArea">
-  <div id="message">test</div>
+<input id="guessArea" type="text" onKeyPress="guessAreaKeyPress()" onKeyUp="guessAreaKeyPress()">
+    <span id="guesses"></span>
   <h1>Hangman</h1>
   <h3 id="progress"></h3>
   <div id="right"></div>

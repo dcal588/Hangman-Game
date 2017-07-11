@@ -9,10 +9,11 @@
       var guessesAvailable = randomWord.length + 5;
       var blankSpaces = blankSpacesStart(randomWord);
 
-     function uniCharCode(event) {
-        var char = event.which;
-        document.getElementById("message").innerHTML = "The Unicode CHARACTER code is: " + char;
-     }
+      function myFunction(event) {
+        var x = event.keyCode;
+        var y = String.fromCharCode(x);
+        document.getElementById("demo").innerHTML = "Number: " + x + " = Character: " + y;
+      }
       function blankSpacesStart (wrd){
         var spaces = '';
         for (var i = 0; i < wrd.length; i++){

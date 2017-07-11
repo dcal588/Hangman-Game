@@ -13,7 +13,6 @@
         var char = event.which || event.keyCode;
         document.getElementById("message").innerHTML = "The Unicode CHARACTER code is: " + char;
      }
-      <input type="text" size="50" onkeypress="uniCharCode(event)" onkeydown="uniKeyCode(event)">
       function blankSpacesStart (wrd){
         var spaces = '';
         for (var i = 0; i < wrd.length; i++){

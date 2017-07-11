@@ -10,7 +10,7 @@
       var blankSpaces = blankSpacesStart(randomWord);
 
       function guessAreaKeyPress() {
-        var guessAreaKeyPress = document.getElementById("guessArea");
+        var guessArea = document.getElementById("guessArea");
         var s = guessArea.value;
         var guesses = document.getElementById("guesses");
         guesses.innerText = s;

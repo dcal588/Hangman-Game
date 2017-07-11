@@ -9,10 +9,11 @@
       var guessesAvailable = randomWord.length + 5;
       var blankSpaces = blankSpacesStart(randomWord);
 
-        document.getElementById("demo").addEventListener("keypress", myFunction);
+      document.getElementById("demo").addEventListener("keypress", listener);
 
-      function myFunction() {
-        document.getElementById("demo").style.backgroundColor = "red";
+      function listener() {
+        var messageDiv = document.getElementById("message");
+          messageDiv.innerHTML = listener;
       }
       function blankSpacesStart (wrd){
         var spaces = '';

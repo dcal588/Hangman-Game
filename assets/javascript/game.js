@@ -1,4 +1,4 @@
-    $(document).ready(function() {
+  
       var words=['wordone','wordtwo','wordthree','wordfour','wordfive'];
       var hints=['hintone','hinttwo','hintthree','hintfour','hintfive'];
       var randomNumber = Math.floor(Math.random() * words.length);
@@ -10,7 +10,6 @@
       var blankSpaces = blankSpacesStart(randomWord);
 
       function guessAreaKeyPress() {
-        var x = event.which;
         var guessArea = document.getElementById("guessArea");
         var s = guessArea.value;
         var guesses = document.getElementById("guesses");
@@ -41,4 +40,5 @@
         var progressDiv = document.getElementById("progress");
           progressDiv.innerHTML = spaces;
       }
-    });
+
+    

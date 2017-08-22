@@ -12,7 +12,9 @@
 
       document.onkeypress = function (e) {
         e = e || window.event;
+        letterGuesses.push(e.key);
         console.log(e.key);
+        console.log(letterGuesses);
       };
 
       function blankSpacesStart (randomWord){

@@ -13,6 +13,7 @@
       document.onkeypress = function (e) {
         e = e || window.event;
         letterGuesses.push(e.key);
+        document.getElementById("guesses").innerHTML = letterGuesses;
         console.log(e.key);
         console.log(letterGuesses);
       };

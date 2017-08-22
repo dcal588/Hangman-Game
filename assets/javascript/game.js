@@ -8,17 +8,16 @@
       var guessesMade = 0;
       var guessesAvailable = randomWord.length + 5;
       var blankSpaces = blankSpacesStart(randomWord);
+      var letterGuesses = [];
 
-      function guessAreaKeyPress() {
-        var guessArea = document.getElementById("guessArea");
-        var s = guessArea.value;
-        var guesses = document.getElementById("guesses");
-        guesses.innerText = s;
-      }
+      document.onkeypress = function (e) {
+        e = e || window.event;
+        console.log(e.key);
+      };
 
       function blankSpacesStart (randomWord){
         var spaces = '';
-        for (var i = 0; i < wrd.length; i++){
+        for (var i = 0; i < randomWord.length; i++){
           spaces = spaces + ' _';
         }
         var progressDiv = document.getElementById("progress");
@@ -41,4 +40,4 @@
           progressDiv.innerHTML = spaces;
       }
 
-    
+ 

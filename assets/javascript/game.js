@@ -16,7 +16,7 @@
         guesses.innerText = s;
       }
 
-      function blankSpacesStart (wrd){
+      function blankSpacesStart (randomWord){
         var spaces = '';
         for (var i = 0; i < wrd.length; i++){
           spaces = spaces + ' _';

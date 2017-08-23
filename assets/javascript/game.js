@@ -1,4 +1,4 @@
-  
+   
       var words=['wordone','wordtwo','wordthree','wordfour','wordfive'];
       var hints=['hintone','hinttwo','hintthree','hintfour','hintfive'];
       var randomNumber = Math.floor(Math.random() * words.length);
@@ -14,8 +14,7 @@
         e = e || window.event;
         letterGuesses.push(e.key);
         document.getElementById("guesses").innerHTML = letterGuesses;
-        console.log(e.key);
-        console.log(letterGuesses);
+        checker(e);
       };
 
       function blankSpacesStart (randomWord){
@@ -34,10 +33,14 @@
       }
       var messageDiv = document.getElementById("message");
 
-      function checker (){
-        var i = randomLetters.indexOf(key);
+      function checker (e){
+        var i = randomLetters.indexOf(e.key);
+        console.log(e.key);
+        console.log(randomLetters);
+        console.log(i);
         if (i !== -1) {
           randomLetters.splice(i,1);
+          console.log(i);
         }
         var progressDiv = document.getElementById("progress");
           progressDiv.innerHTML = spaces;

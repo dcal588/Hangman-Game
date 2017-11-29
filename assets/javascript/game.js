@@ -6,8 +6,10 @@ var randomHint = hints[randomNumber];
 var randomLetters = randomWord.split('');
 var guessesMade = 0;
 var guessesAvailable = randomWord.length + 5;
-var blankSpaces = blankSpacesStart(randomWord);
 var letterGuesses = [];
+
+hintPlacer ();
+blankSpacesStart();
 
 document.onkeypress = function (e) {
   e = e || window.event;
@@ -16,35 +18,36 @@ document.onkeypress = function (e) {
   checker(e);
 };
 
-function blankSpacesStart (randomWord) {
-  var spaces = '';
+function hintPlacer () {
+document.getElementById("hint").innerHTML = randomHint;
+}
+
+function blankSpacesStart () {
+  var spaces = [];
   for (var i = 0; i < randomWord.length; i++) {
     spaces = spaces + ' _';
   }
-  var progressDiv = document.getElementById("progress");
-  progressDiv.innerHTML = spaces;
+  document.getElementById("progress").innerHTML = spaces;
+};
+
+function guesses () {
+if (guessesMade === 2) {
+    document.getElementById("message").innerHTML = "Game Over";
+  }
 }
-
-var hintDiv = document.getElementById("hint");
-hintDiv.innerHTML = randomHint;
-      
-if (guessesMade === guessesAvailable) {
-  messageDiv.innerHTML = "Game Over";
-}
-
-var messageDiv = document.getElementById("message");
-
 function checker (e){
   var i = randomLetters.indexOf(e.key);
   console.log("ekey " + e.key);
   console.log("variable i :" + i);
   if (i !== -1) {
-    spaces.splice(i,1,);
-    console.log("variable 1 number 2: " + i);
-    progressDiv.innerHTML = randomLetters;
+        console.log("variable 1 number 2: " + i);
+    spaces.splice(i,1, );
+    console.log(spaces);
+    progressDiv.innerHTML = spaces;
     console.log("random letters " + randomLetters);
   }
   var progressDiv = document.getElementById("progress");
   progress.innerHTML = spaces;
 }
+
  

@@ -49,5 +49,3 @@ function checker (e){
   var progressDiv = document.getElementById("progress");
   progress.innerHTML = spaces;
 }
-
- 

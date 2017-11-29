@@ -8,7 +8,7 @@ var guessesMade = 0;
 var guessesAvailable = randomWord.length + 5;
 var letterGuesses = [];
 
-hintPlacer ();
+hintPlacer (randomHint);
 blankSpacesStart(randomWord);
 
 document.onkeypress = function (e) {
@@ -49,3 +49,5 @@ function checker (e){
   var progressDiv = document.getElementById("progress");
   progress.innerHTML = spaces;
 }
+
+ 

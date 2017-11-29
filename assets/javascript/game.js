@@ -18,7 +18,7 @@ document.onkeypress = function (e) {
   checker(e);
 };
 
-function hintPlacer () {
+function hintPlacer (randomHint) {
 document.getElementById("hint").innerHTML = randomHint;
 }
 

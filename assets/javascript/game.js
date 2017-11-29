@@ -9,7 +9,7 @@ var guessesAvailable = randomWord.length + 5;
 var letterGuesses = [];
 
 hintPlacer ();
-blankSpacesStart();
+blankSpacesStart(randomWord);
 
 document.onkeypress = function (e) {
   e = e || window.event;
@@ -22,7 +22,7 @@ function hintPlacer () {
 document.getElementById("hint").innerHTML = randomHint;
 }
 
-function blankSpacesStart () {
+function blankSpacesStart (randomWord) {
   var spaces = [];
   for (var i = 0; i < randomWord.length; i++) {
     spaces = spaces + ' _';

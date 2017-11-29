@@ -7,7 +7,6 @@ var randomLetters = randomWord.split('');
 var guessesMade = 0;
 var guessesAvailable = randomWord.length + 5;
 var letterGuesses = [];
-
 hintPlacer (randomHint);
 blankSpacesStart(randomWord);
 
